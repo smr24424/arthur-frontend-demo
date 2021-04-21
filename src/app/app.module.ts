@@ -6,12 +6,14 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { ProductDialogComponent } from './product-dialog/product-dialog.component';
+import { ScrollTopComponent } from './scroll-top/scroll-top.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CarouselComponent,
-    ProductDialogComponent
+    ProductDialogComponent,
+    ScrollTopComponent
   ],
   imports: [
     BrowserModule,
