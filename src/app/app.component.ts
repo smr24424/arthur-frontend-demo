@@ -147,12 +147,22 @@ export class AppComponent implements OnInit {
     }
   ];
 
+  nowTime = +new Date();
+  expectTime = this.nowTime + 86400 *1000;
+  times = (this.expectTime - this.nowTime) / 1000;
+  d: number;
+  h: number;
+  m: number;
+  s: number;
+
   ngOnInit() {
     this.products.forEach(v => {
       if (!this.categorys.includes(v.category)) {
         this.categorys.push(v.category);
       }
     });
+
+    this.timer();
   }
 
   openProductDialog(productItem: any) {
@@ -162,5 +172,22 @@ export class AppComponent implements OnInit {
 
   search(categoryKey: string) {
     this.categoryKey = categoryKey === '全部' ? '' : categoryKey;
+  }
+
+  timer() {
+    setInterval(() => {
+      this.times--;
+      this.d = parseInt(`${this.times / 60 / 60 / 24}`);
+      this.h = parseInt(`${(this.times / 60 / 60) % 24}`);
+      this.m = parseInt(`${(this.times / 60) % 60}`);
+      this.s = this.times % 60;
+
+      if (this.s > 0) {
+        this.s = this.s < 10 ? 0 + this.s : this.s;
+        var countdown = this.d + "天" + this.h + "時" + this.m + "分" + this.s + "秒";
+        console.log(countdown)
+      }
+
+    }, 1000);
   }
 }

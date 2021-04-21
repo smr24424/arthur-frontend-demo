@@ -31,10 +31,18 @@
   margin: auto;
   max-width: 1200px;
 
+  .countdown {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #000;
+  }
+
   .app-content {
     display: flex;
     flex-direction: row;
-    margin-top: 70px;
 
     .category-menu {
       display: flex;
