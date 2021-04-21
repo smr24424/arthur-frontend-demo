@@ -1,0 +1,10 @@
+<div class="slideshow-container">
+  <ng-container *ngFor="let imgAd of imgAds">
+    <div class="mySlides fade">
+      <img [src]="imgAd">
+    </div>
+  </ng-container>
+
+  <a class="prev" (click)="plusSlides(-1)">❮</a>
+  <a class="next" (click)="plusSlides(1)">❯</a>
+</div>
