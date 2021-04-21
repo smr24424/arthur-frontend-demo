@@ -5,11 +5,13 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { ProductDialogComponent } from './product-dialog/product-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CarouselComponent
+    CarouselComponent,
+    ProductDialogComponent
   ],
   imports: [
     BrowserModule,

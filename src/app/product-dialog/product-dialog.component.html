@@ -1,0 +1,9 @@
+<div class="product-dialog" (click)="dialogClose.emit()">
+  <div class="prouduct-detial" (click)="$event.stopPropagation()">
+    <span class="clear" (click)="dialogClose.emit()">ｘ</span>
+    <img [src]="product?.img">
+
+    <span class="prouduct-title">{{ product?.title }}</span>
+    <span class="prouduct-content">{{ product?.content }}</span>
+  </div>
+</div>
