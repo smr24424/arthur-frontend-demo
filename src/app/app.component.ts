@@ -184,8 +184,6 @@ export class AppComponent implements OnInit {
 
       if (this.s > 0) {
         this.s = this.s < 10 ? 0 + this.s : this.s;
-        var countdown = this.d + "天" + this.h + "時" + this.m + "分" + this.s + "秒";
-        console.log(countdown)
       }
 
     }, 1000);
